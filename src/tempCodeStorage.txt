@@ -1,0 +1,157 @@
+// void RayTracer::run() {
+
+//     extractToCamera();
+//     extractToImage();
+//     Viewport viewObj(1.0,2.0);
+//     int dimx = imgObject->getDimX(), dimy = imgObject->getDimY(); 
+//     std::vector<double> buffer(3*dimx*dimy);
+//     Eigen::Vector3f upperLeftCorner = camObject->getOrigin() - viewObj.getHorizontal()/2 + viewObj.getVertical()/2 + camObject->getLookAt();
+
+//     for(int j{0}; j<dimy; j++) {
+//         for(int i{0}; i<dimx; i++) {
+
+//             float u = (float) i / (dimx-1);
+//             float v = (float) j / (dimy-1);
+
+//             Ray r(camObject->getOrigin(), upperLeftCorner + u*viewObj.getHorizontal() - v*viewObj.getVertical() - camObject->getOrigin());
+//             Eigen::Vector3f pixelColor = rayColor(r);
+
+//             buffer[3*j*dimx+3*i+0]=pixelColor.x();
+//             buffer[3*j*dimx+3*i+1]=pixelColor.y();
+//             buffer[3*j*dimx+3*i+2]=pixelColor.z();
+//         }
+//     }
+    
+//     //save_ppm("testing.ppm",buffer,dimx,dimy);
+    
+// }
+
+
+#ifndef VIEWPORT_H
+#define VIEWPORT_H
+
+#include <Eigen/Core>
+
+class Viewport {
+    public:
+        Viewport() {};
+        Viewport(double aspect, double view_h) : aspect_ratio(aspect), viewport_h(view_h), viewport_w(aspect * view_h), horizontal(viewport_w, 0, 0), vertical(0, viewport_h, 0) {}
+        Eigen::Vector3f getHorizontal() {return horizontal;}
+        Eigen::Vector3f getVertical() {return vertical;}
+        double getAspectRatio() {return aspect_ratio;}
+        double getViewportH() {return viewport_h;}
+        double getViewportW() {return viewport_w;}
+
+    public:
+        double viewport_h, viewport_w, aspect_ratio;
+        Eigen::Vector3f horizontal, vertical;
+};
+
+#endif
+
+
+
+#pragma once
+
+class Image {
+    public:
+        Image() {}
+        Image(int _dimx, int _dimy) : dimx(_dimx), dimy(_dimy) {} 
+        int getDimX() {return dimx;}
+        int getDimY() {return dimy;}
+    public:
+        int dimx,dimy;
+};
+
+JSON file: 
+,
+        {
+            "type":"point",
+            "centre":[2, 4, 0],
+            "id":[0.5, 0.5, 0.5],
+            "is":[1, 1, 1]
+            
+        }
+
+
+// bool RayTracer::extractToCamera() {
+//     cout<<"Extracting to Camera"<<endl;
+//     int _FOV;
+//     int temp1[3],temp2[3],temp3[3];
+    
+//     // use iterators to read-in array types
+//     for (auto itr = j["output"].begin(); itr!= j["output"].end(); itr++){
+        
+//         if(itr->contains("fov")){
+//             _FOV = (*itr)["fov"].get<float>();            
+//         } else {
+//             cout<<"Fatal error: Camera Object should contain FOV"<<endl;
+//             return false;
+//         }
+//         int i = 0;
+//         for (auto itr2 =(*itr)["centre"].begin(); itr2!= (*itr)["centre"].end(); itr2++){
+//             if(i<3){
+//                 temp1[i++] = (*itr2).get<float>();
+//             } else {
+//                 cout<<"Warning: Too many entries in size"<<endl;
+//             }
+//         }
+
+//         i = 0;
+//         for (auto itr2 =(*itr)["lookat"].begin(); itr2!= (*itr)["lookat"].end(); itr2++){
+//             if(i<3){
+//                 temp2[i++] = (*itr2).get<float>();
+//             } else {
+//                 cout<<"Warning: Too many entries in size"<<endl;
+//             }
+//         }
+
+//         i = 0;
+//         for (auto itr2 =(*itr)["up"].begin(); itr2!= (*itr)["up"].end(); itr2++){
+//             if(i<3){
+//                 temp3[i++] = (*itr2).get<float>();
+//             } else {
+//                 cout<<"Warning: Too many entries in size"<<endl;
+//             }
+//         }
+        
+//         Eigen::Vector3f _origin(temp1[0],temp1[1],temp1[2]), _lookat(temp2[0],temp2[1],temp2[2]), _up(temp3[0],temp3[1],temp3[2]);
+        
+//         camObject = new Camera(_origin,_lookat,_up,_FOV);
+//     }
+    
+//     return true;
+// }
+
+// bool RayTracer::hit_triangle(const Ray& r, const Eigen::Vector3f& a,const Eigen::Vector3f& b,const Eigen::Vector3f& c) {
+    
+//     Eigen::Matrix3f Amatrix, tMatrix, betaMatrix, gammaMatrix;
+//     float t,Beta,Gamma;
+
+//     Amatrix << (a.x() - b.x()), (a.x() - c.x()), r.direction.x(), (a.y() - b.y()), (a.y() - c.y()), r.direction.y(), (a.z() - b.z()), (a.z() - c.z()), r.direction.z();
+//     float detA = Amatrix.determinant();
+    
+//     tMatrix << (a.x() - b.x()), (a.x() - c.x()), (a.x() - r.origin.x()), (a.y() - b.y()), (a.y() - c.y()), (a.y() - r.origin.y()), (a.z() - b.z()), (a.z() - c.z()), (a.z() - r.origin.z());
+//     betaMatrix << (a.x() - r.origin.x()), (a.x() - c.x()), r.direction.x(), (a.y() - r.origin.y()), (a.y() - c.y()), r.direction.y(), (a.z() - r.origin.z()), (a.z() - c.z()), r.direction.z();
+//     gammaMatrix << (a.x() - b.x()), (a.x() - r.origin.x()), r.direction.x(), (a.y() - b.y()), (a.y() - r.origin.y()), r.direction.y(), (a.z() - b.z()), (a.z() - r.origin.z()), r.direction.z();
+
+//     t = tMatrix.determinant() / detA;
+
+//     if(t < 0) {
+//         return false;
+//     }
+
+//     Gamma = gammaMatrix.determinant() / detA;
+
+//     if(Gamma < 0 || Gamma > 1) {
+//         return false;
+//     }
+
+//     Beta = betaMatrix.determinant() / detA;
+
+//     if(Beta < 0 || Beta > 1 - Gamma) {
+//         return false;
+//     }
+
+//     return true;
+// }
