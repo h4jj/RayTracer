@@ -353,4 +353,5 @@ CMakeFiles/raytracer.dir/src/Sphere.cpp.o: \
  /usr/include/eigen3/Eigen/src/Eigenvalues/GeneralizedEigenSolver.h \
  /usr/include/eigen3/Eigen/src/Eigenvalues/./RealQZ.h \
  /usr/include/eigen3/Eigen/src/Eigenvalues/MatrixBaseEigenvalues.h \
- /home/hajj/Concordia/Winter-2022/COMP371/COMP371_all/COMP371_RaytracerBase/code/src/BoundingBox.h
+ /home/hajj/Concordia/Winter-2022/COMP371/COMP371_all/COMP371_RaytracerBase/code/src/BoundingBox.h \
+ /home/hajj/Concordia/Winter-2022/COMP371/COMP371_all/COMP371_RaytracerBase/code/src/BoundingVolume.h

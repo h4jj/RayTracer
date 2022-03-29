@@ -157,16 +157,13 @@ CMakeFiles/raytracer.dir/main.cpp.o: \
  /usr/include/c++/9/bits/uniform_int_dist.h \
  /usr/include/x86_64-linux-gnu/c++/9/bits/opt_random.h \
  /usr/include/c++/9/bits/random.tcc /usr/include/c++/9/numeric \
- /usr/include/c++/9/bits/stl_numeric.h /usr/include/c++/9/queue \
- /usr/include/c++/9/deque /usr/include/c++/9/bits/stl_deque.h \
- /usr/include/c++/9/bits/deque.tcc /usr/include/c++/9/bits/stl_heap.h \
- /usr/include/c++/9/bits/stl_queue.h \
- /usr/include/c++/9/bits/uses_allocator.h /usr/include/c++/9/thread \
+ /usr/include/c++/9/bits/stl_numeric.h /usr/include/c++/9/thread \
  /usr/include/c++/9/chrono /usr/include/c++/9/ratio \
  /usr/include/c++/9/ctime /usr/include/c++/9/bits/parse_numbers.h \
  /usr/include/c++/9/memory /usr/include/c++/9/bits/stl_tempbuf.h \
  /usr/include/c++/9/bits/stl_raw_storage_iter.h \
  /usr/include/c++/9/ext/concurrence.h \
+ /usr/include/c++/9/bits/uses_allocator.h \
  /usr/include/c++/9/bits/unique_ptr.h /usr/include/c++/9/utility \
  /usr/include/c++/9/bits/stl_relops.h /usr/include/c++/9/tuple \
  /usr/include/c++/9/array /usr/include/c++/9/bits/invoke.h \
@@ -178,7 +175,10 @@ CMakeFiles/raytracer.dir/main.cpp.o: \
  /usr/include/c++/9/bits/shared_ptr_atomic.h \
  /usr/include/c++/9/bits/atomic_base.h \
  /usr/include/c++/9/bits/atomic_lockfree_defines.h \
- /usr/include/c++/9/backward/auto_ptr.h \
+ /usr/include/c++/9/backward/auto_ptr.h /usr/include/c++/9/queue \
+ /usr/include/c++/9/deque /usr/include/c++/9/bits/stl_deque.h \
+ /usr/include/c++/9/bits/deque.tcc /usr/include/c++/9/bits/stl_heap.h \
+ /usr/include/c++/9/bits/stl_queue.h \
  /home/hajj/Concordia/Winter-2022/COMP371/COMP371_all/COMP371_RaytracerBase/code/src/../external/json.hpp \
  /usr/include/c++/9/algorithm /usr/include/c++/9/bits/stl_algo.h \
  /usr/include/c++/9/bits/algorithmfwd.h /usr/include/c++/9/cstddef \
@@ -402,8 +402,10 @@ CMakeFiles/raytracer.dir/main.cpp.o: \
  /usr/include/eigen3/Eigen/src/Eigenvalues/GeneralizedEigenSolver.h \
  /usr/include/eigen3/Eigen/src/Eigenvalues/./RealQZ.h \
  /usr/include/eigen3/Eigen/src/Eigenvalues/MatrixBaseEigenvalues.h \
- /home/hajj/Concordia/Winter-2022/COMP371/COMP371_all/COMP371_RaytracerBase/code/src/HitRecord.h \
+ /home/hajj/Concordia/Winter-2022/COMP371/COMP371_all/COMP371_RaytracerBase/code/src/BoundingVolume.h \
  /home/hajj/Concordia/Winter-2022/COMP371/COMP371_all/COMP371_RaytracerBase/code/src/BoundingBox.h \
+ /home/hajj/Concordia/Winter-2022/COMP371/COMP371_all/COMP371_RaytracerBase/code/src/BoundingSphere.h \
+ /home/hajj/Concordia/Winter-2022/COMP371/COMP371_all/COMP371_RaytracerBase/code/src/HitRecord.h \
  /home/hajj/Concordia/Winter-2022/COMP371/COMP371_all/COMP371_RaytracerBase/code/src/Surface.h \
  /home/hajj/Concordia/Winter-2022/COMP371/COMP371_all/COMP371_RaytracerBase/code/src/Sphere.h \
  /home/hajj/Concordia/Winter-2022/COMP371/COMP371_all/COMP371_RaytracerBase/code/src/Rectangle.h \

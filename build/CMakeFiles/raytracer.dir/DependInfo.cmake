@@ -14,6 +14,7 @@ set(CMAKE_DEPENDS_DEPENDENCY_FILES
   "/home/hajj/Concordia/Winter-2022/COMP371/COMP371_all/COMP371_RaytracerBase/code/external/test_ppm.cpp" "CMakeFiles/raytracer.dir/external/test_ppm.cpp.o" "gcc" "CMakeFiles/raytracer.dir/external/test_ppm.cpp.o.d"
   "/home/hajj/Concordia/Winter-2022/COMP371/COMP371_all/COMP371_RaytracerBase/code/main.cpp" "CMakeFiles/raytracer.dir/main.cpp.o" "gcc" "CMakeFiles/raytracer.dir/main.cpp.o.d"
   "/home/hajj/Concordia/Winter-2022/COMP371/COMP371_all/COMP371_RaytracerBase/code/src/RayTracer.cpp" "CMakeFiles/raytracer.dir/src/RayTracer.cpp.o" "gcc" "CMakeFiles/raytracer.dir/src/RayTracer.cpp.o.d"
+  "/home/hajj/Concordia/Winter-2022/COMP371/COMP371_all/COMP371_RaytracerBase/code/src/RayTracerUtils.cpp" "CMakeFiles/raytracer.dir/src/RayTracerUtils.cpp.o" "gcc" "CMakeFiles/raytracer.dir/src/RayTracerUtils.cpp.o.d"
   "/home/hajj/Concordia/Winter-2022/COMP371/COMP371_all/COMP371_RaytracerBase/code/src/Sphere.cpp" "CMakeFiles/raytracer.dir/src/Sphere.cpp.o" "gcc" "CMakeFiles/raytracer.dir/src/Sphere.cpp.o.d"
   )
 

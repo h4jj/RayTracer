@@ -273,6 +273,30 @@ src/RayTracer.cpp.s:
 	$(MAKE) $(MAKESILENT) -f CMakeFiles/raytracer.dir/build.make CMakeFiles/raytracer.dir/src/RayTracer.cpp.s
 .PHONY : src/RayTracer.cpp.s
 
+src/RayTracerUtils.o: src/RayTracerUtils.cpp.o
+.PHONY : src/RayTracerUtils.o
+
+# target to build an object file
+src/RayTracerUtils.cpp.o:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/raytracer.dir/build.make CMakeFiles/raytracer.dir/src/RayTracerUtils.cpp.o
+.PHONY : src/RayTracerUtils.cpp.o
+
+src/RayTracerUtils.i: src/RayTracerUtils.cpp.i
+.PHONY : src/RayTracerUtils.i
+
+# target to preprocess a source file
+src/RayTracerUtils.cpp.i:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/raytracer.dir/build.make CMakeFiles/raytracer.dir/src/RayTracerUtils.cpp.i
+.PHONY : src/RayTracerUtils.cpp.i
+
+src/RayTracerUtils.s: src/RayTracerUtils.cpp.s
+.PHONY : src/RayTracerUtils.s
+
+# target to generate assembly for a file
+src/RayTracerUtils.cpp.s:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/raytracer.dir/build.make CMakeFiles/raytracer.dir/src/RayTracerUtils.cpp.s
+.PHONY : src/RayTracerUtils.cpp.s
+
 src/Sphere.o: src/Sphere.cpp.o
 .PHONY : src/Sphere.o
 
@@ -324,6 +348,9 @@ help:
 	@echo "... src/RayTracer.o"
 	@echo "... src/RayTracer.i"
 	@echo "... src/RayTracer.s"
+	@echo "... src/RayTracerUtils.o"
+	@echo "... src/RayTracerUtils.i"
+	@echo "... src/RayTracerUtils.s"
 	@echo "... src/Sphere.o"
 	@echo "... src/Sphere.i"
 	@echo "... src/Sphere.s"
