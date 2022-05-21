@@ -1,4 +1,4 @@
-
+## RayTracer - Final Project for COMP354 Computer Graphics
 
 This code is used for three purposes:
 
@@ -15,14 +15,16 @@ IF STUDENT_SOLUTION is defined the code expects a student solution is implemente
 
 You can switch on and off these defines in the CMakeLists.txt file. 
 
-
+# Usage
 Building the dummy test
 
-1) Create build folder: mkdir build
-2) cd build
-3) cmake ../
-4) make
-5) ./raytracer
+```bash
+mkdir build
+cd build
+cmake ../
+make
+./raytracer
+```
 
 Building the solution:
 1) Uncomment the #add_compile_options(-DSTUDENT_SOLUTION) line in the CMakeLists.txt 
