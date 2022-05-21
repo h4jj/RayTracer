@@ -28,12 +28,13 @@ make
 
 Building the solution:
 1) Uncomment the #add_compile_options(-DSTUDENT_SOLUTION) line in the CMakeLists.txt 
-2) Create build folder: mkdir build
-3) Create the src folder: mkdir src
-3) cd build
-3) cmake ../
-4) make
-5) ./raytracer <filename.json>
-
+```bash
+mkdir build
+mkdir src
+cd build
+cmake ../
+make
+./raytracer <filename.json>
+```
 
 Note that some test scenes are provided in the assets folder. You can do a soft link to the assets folder in the build folder for your convenience.
