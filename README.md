@@ -1,6 +1,6 @@
-## RayTracer - Final Project for COMP354 Computer Graphics
+# RayTracer - Final Project for COMP354 Computer Graphics
 
-# Supported Features
+## Supported Features
 
 1) Local Illumination
 2) Global Illumination
