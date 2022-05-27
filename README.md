@@ -1,4 +1,4 @@
-# RayTracer - Final Project for COMP354 Computer Graphics
+# RayTracer - Final Project for COMP371 Computer Graphics
 
 ## Supported Features
 
