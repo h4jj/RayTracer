@@ -1,5 +1,15 @@
 ## RayTracer - Final Project for COMP354 Computer Graphics
 
+# Supported Features
+
+1) Local Illumination
+2) Global Illumination
+3) Primitive Shapes (Spheres, Rectangles)
+4) Accelerated Structures
+5) Anti-Aliasing
+6) Soft and Hard Shadows
+7) Area and Spot Light source
+
 This code is used for three purposes:
 
 1) Build the official course solution
@@ -16,15 +26,6 @@ IF STUDENT_SOLUTION is defined the code expects a student solution is implemente
 You can switch on and off these defines in the CMakeLists.txt file. 
 
 # Usage
-Building the dummy test
-
-```bash
-mkdir build
-cd build
-cmake ../
-make
-./raytracer
-```
 
 Building the solution:
 1) Uncomment the #add_compile_options(-DSTUDENT_SOLUTION) line in the CMakeLists.txt 
